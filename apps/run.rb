@@ -5,7 +5,6 @@ include Mongo
 
 set :bind, '0.0.0.0'
 
-
 # connecting to the database
 client = MongoClient.new # defaults to localhost:27017
 db     = client['example-db']

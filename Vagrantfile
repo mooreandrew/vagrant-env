@@ -132,6 +132,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Sinatra Ports
   config.vm.network :forwarded_port, host: 4567, guest: 4567
 
+  # Flask Ports
+  config.vm.network :forwarded_port, host: 5000, guest: 5000
+
+
   # Cache's the apt-get files, this speeds up a second provisioning
   config.vm.synced_folder "aptget", "/var/cache/apt/archives/"
   # Shares the app folder
