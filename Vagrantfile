@@ -140,4 +140,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "aptget", "/var/cache/apt/archives/"
   # Shares the app folder
   config.vm.synced_folder "apps", "/home/vagrant/apps/"
+
+  # Jenkins Port
+  config.vm.network :forwarded_port, host: 8080, guest: 8080
 end
